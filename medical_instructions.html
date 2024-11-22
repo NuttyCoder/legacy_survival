@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Instructions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Medical Triage Instructions</h1>
+    <ol>
+        <li>Check for responsiveness and breathing.</li>
+        <li>Call emergency services if the person is unresponsive.</li>
+        <li>If trained, start CPR if the person is not breathing.</li>
+        <li>Control any bleeding with direct pressure.</li>
+        <li>Keep the person warm and comfortable.</li>
+        <li>Monitor the person until help arrives.</li>
+    </ol>
+    <button onclick="window.location.href='{{ url_for('index') }}'">Back to Home</button>
+</body>
+</html>
