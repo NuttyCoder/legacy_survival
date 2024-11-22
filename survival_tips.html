@@ -1,1 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survival Tips</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Survival Tips</h1>
+    <ul>
+        <li><strong>Find Shelter:</strong> Seek shelter to protect yourself from the elements. Use natural formations like caves or build a makeshift shelter using branches and leaves.</li>
+        <li><strong>Stay Hydrated:</strong> Ensure you have access to clean drinking water. Boil water if necessary, or use water purification tablets.</li>
+        <li><strong>Keep Warm:</strong> In cold conditions, keep warm with layers of clothing and by building a fire. Insulate yourself from the ground with leaves or a sleeping pad.</li>
+        <li><strong>Signal for Help:</strong> Use a whistle, mirror, or other signaling devices to attract attention.</li>
+        <li><strong>First Aid:</strong> Carry a first aid kit and know basic first aid techniques.</li>
+        <li><strong>Food Supply:</strong> Pack non-perishable food items and know how to find edible plants and animals.</li>
+    </ul>
+    <button onclick="window.location.href='{{ url_for('index') }}'">Back to Home</button>
+</body>
+</html>
 
