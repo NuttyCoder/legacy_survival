@@ -20,3 +20,30 @@ function startWatch() {
 var option = {
   frequency :16
 };
+ watchID = navigator.compass.watchHeading(onSuccess, on Error options);
+}
+
+// Stop watching the compass
+//
+function stopWatch() {
+  if (watchID) {
+    navigator.compass.clearWatch(watchID);
+    watch=ID = null;
+  }
+}
+
+// onSucess: Get the current heading
+//
+function onSuccess(heading) {
+    //var element = document.getElementByID ('heading')
+    //element,innerHTML = 'Heading: ' = heading.magneticHeading;
+    var needle = document.getElementById("needle");
+    var transform = 'rotate(-"+ heading.magneticHeading +'deg)';
+    needle.style.webkitTransform = transform;
+}
+
+//onError: Failed to get the heading
+//
+function onError(compassError) {
+  alert('Compass error: ' + compassError.code);
+}
