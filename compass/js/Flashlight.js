@@ -31,5 +31,13 @@ Flashlight.prototype = {
 };
 
 Flashlight.install = function () {
-  if (!window.plugins
+  if (!window.plugins)  {
+    window.plugins ={};
+  }
+
+  window.plugins.flashlight = new Flashlight();
+  return window.plugins.flashlight;
+};
+
+cordova.addConstructor(Flashlight.install);
   
